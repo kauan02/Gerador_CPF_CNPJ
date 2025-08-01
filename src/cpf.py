@@ -14,7 +14,7 @@ def gerar_cpf_formatado():
         "PR": 9, "SC": 9
     }
     
-    estado = input("Base gerada, qual o estado de emissão? ex: SP\n").strip().upper()
+    estado = input("Base gerada, qual o estado de emissao? ex: SP\n").strip().upper()
     
     if estado not in uf:
         return "Estado invalido"
@@ -33,6 +33,6 @@ def gerar_cpf_formatado():
     cpf_str = "".join(map(str, cpf))
     cpf_formatado = f"{cpf_str[:3]}.{cpf_str[3:6]}.{cpf_str[6:9]}-{cpf_str[9:]}"
     
-    return cpf_formatado
+    return cpf_formatado, cpf
 
 print(gerar_cpf_formatado())
